@@ -1,0 +1,5 @@
+数据库主机 root/root
+mysql 数据库在 C_8_Docker  账号密码  root / 123456
+systemctl status firewalld.service
+
+systemctl stop firewalld.service
