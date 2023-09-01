@@ -16,16 +16,13 @@ import java.util.List;
 
 import static org.mockito.Mockito.mock;
 
-//@SpringBootTest
 @RunWith(MockitoJUnitRunner.class)
 public class TyControllerTest {
 
     @InjectMocks
     TyController tyController = new TyController();
-
     @Mock
     TyServiceImpl tyService;
-
 
     @Before
     public void initMocks() {
@@ -42,7 +39,6 @@ public class TyControllerTest {
         Mockito.when(tyService.find()).thenReturn(res);
         List<String> test = tyController.test();
         Assert.assertEquals(res.size(), test.size());
-        Mockito.doNothing().when(tyService).save("rpaTaskId");
     }
 
 }
